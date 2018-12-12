@@ -4,6 +4,9 @@
  * Assignment: HW 9 - Singleton Problems
  * 
  * Date: 2017-11-11
+ *
+ * @saran,vamsi,raghu
+ *
  */
 package HW9.edu.fsu.csc7400.patterns.singleton;
 
@@ -12,6 +15,7 @@ package HW9.edu.fsu.csc7400.patterns.singleton;
  * and subclassing work
  * 
  * @author orlando
+ * @author saran
  */
 public class BaseSingleton {	
 	/**
@@ -59,7 +63,8 @@ public class BaseSingleton {
 	
 	/**
 	 * Private constructor for singleton
+	 * Change access modifier to protected to extend BaseSingleton class
 	 */
-	private BaseSingleton() {
+	protected BaseSingleton() {
 	}
 }

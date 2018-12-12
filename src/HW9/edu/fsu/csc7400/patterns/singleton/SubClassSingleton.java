@@ -4,6 +4,9 @@
  * Assignment: HW 9 - Singleton Problems
  * 
  * Date: 2017-11-11
+ * 
+ * @saran,vamsi,raghu 
+ * 
  */
 package HW9.edu.fsu.csc7400.patterns.singleton;
 
@@ -11,6 +14,7 @@ package HW9.edu.fsu.csc7400.patterns.singleton;
  * Subclassed singleton. Will set the state to different value
  * 
  * @author orlando
+ * @author saran
  */
 public class SubClassSingleton extends BaseSingleton {
 
@@ -18,7 +22,7 @@ public class SubClassSingleton extends BaseSingleton {
 	 * Simple function that sets state
 	 */
 	@Override
-	public void DoSomething() {
+	public void doSomething() {
 		setSomeState(2);
 	}
 
@@ -32,9 +36,21 @@ public class SubClassSingleton extends BaseSingleton {
 		return 100;
 	}
 
+	public SubClassSingleton() {
+	}
 	/**
-	 * Single constructor must be private
+	 * Single constructor must be private. 
+	 * Holds singleton instance of type SubClassSingleton
 	 */
-	private SubClassSingleton() {
+	private static SubClassSingleton instance;
+
+	/**
+	 * Creating instance of SubClassSingleton using getInstance() method and returning
+	 * singleton instance.
+	 */
+	public static synchronized BaseSingleton getInstance() {
+		if (instance == null)
+		instance = new SubClassSingleton();
+		return instance;
 	}
 }
