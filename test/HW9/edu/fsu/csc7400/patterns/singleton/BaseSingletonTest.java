@@ -22,7 +22,7 @@ class BaseSingletonTest {
 	@Test
 	void testGetInstance() {
 		assertEquals(
-				0,
+				1,
 				BaseSingleton.getInstance().getSomeState());
 	}
 
