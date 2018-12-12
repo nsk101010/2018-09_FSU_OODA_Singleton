@@ -19,6 +19,10 @@ class BaseSingletonTest {
 		singleton = BaseSingleton.getInstance();
 	}
 
+	/**
+	 * Update test condition to pass GetInstance check.
+	 */
+
 	@Test
 	void testGetInstance() {
 		assertEquals(
